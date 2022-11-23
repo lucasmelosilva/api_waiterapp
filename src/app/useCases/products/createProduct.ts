@@ -12,12 +12,12 @@ export async function createProducts(req: Request, res: Response) {
       description,
       imagePath,
       price: Number(price),
-      ingredients: JSON.parse(ingredients),
+      ingredients: ingredients ? JSON.parse(ingredients) : [],
       category,
     });
 
     res.status(201).json(product);
   } catch (err) {
-    res.sendStatus(500).send(err);
+    res.send(err).sendStatus(500);
   }
 }
