@@ -10,7 +10,7 @@ export async function creatOrder(req: Request, res: Response) {
       products,
     });
 
-    res.json(order);
+    res.status(201).json(order);
   } catch (err) {
     console.log(err);
     res.status(500);
