@@ -11,6 +11,7 @@ import { listProductByCategory } from "./app/useCases/categories/listProductsByC
 import { listOrder } from "./app/useCases/orders/listOrder";
 import { creatOrder } from "./app/useCases/orders/createOrder";
 import { changeStatusOrder } from "./app/useCases/orders/changeStatusOrder";
+import { deleteOrder } from "./app/useCases/orders/deleteOrder";
 
 export const router = Router();
 
@@ -51,6 +52,4 @@ router.post("/orders", creatOrder);
 router.patch("/orders/:orderId", changeStatusOrder);
 
 // Deleter/Cancel order
-router.delete("/orders/:orderId", (req, res) => {
-  res.send("OK");
-});
+router.delete("/orders/:orderId", deleteOrder);
