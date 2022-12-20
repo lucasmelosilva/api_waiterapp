@@ -9,7 +9,7 @@ import { createProducts } from "./app/useCases/products/createProduct";
 import { listProduct } from "./app/useCases/products/listProducts";
 import { listProductByCategory } from "./app/useCases/categories/listProductsByCategory";
 import { listOrder } from "./app/useCases/orders/listOrder";
-import { creatOrder } from "./app/useCases/orders/createOrder";
+import { createOrder } from "./app/useCases/orders/createOrder";
 import { changeStatusOrder } from "./app/useCases/orders/changeStatusOrder";
 import { deleteOrder } from "./app/useCases/orders/deleteOrder";
 
@@ -46,7 +46,7 @@ router.get("/categories/:categoryId/products", listProductByCategory);
 router.get("/orders", listOrder);
 
 // Create Order
-router.post("/orders", creatOrder);
+router.post("/orders", createOrder);
 
 //Change Status Order
 router.patch("/orders/:orderId", changeStatusOrder);

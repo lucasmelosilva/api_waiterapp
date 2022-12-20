@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { Order } from "../../models/Order";
 
-export async function creatOrder(req: Request, res: Response) {
+export async function createOrder(req: Request, res: Response) {
   try {
     const { table, products } = req.body;
 
